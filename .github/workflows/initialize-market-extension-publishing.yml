@@ -44,16 +44,36 @@ jobs:
       - name: Resolve latest engine version
         id: ivy
         run: |
+          set -euo pipefail
+
           selected="${{ github.event.inputs.version }}"
-          page=$(curl -s https://developer.axonivy.com/download)
-          latest12=$(echo "$page" | grep -oE '12\.[0-9]+\.[0-9]+' | sort -V | tail -n 1)
-          latest13=$(echo "$page" | grep -oE '13\.[0-9]+\.[0-9]+' | sort -V | tail -n 1)
+
           if [[ "$selected" == "12.x" ]]; then
-            version="$latest12"
+            pageUrl="https://developer.axonivy.com/download"
+            major="12"
           else
-            version="$latest13"
+            pageUrl="https://developer.axonivy.com/download/leading-edge"
+            major="13"
           fi
+
+          echo "Fetching $pageUrl"
+          page=$(curl -s "$pageUrl")
+
+          # Extract only versions from real engine download links
+          version=$(echo "$page" \
+            | grep -oE "download\.axonivy\.com/${major}\.[0-9]+\.[0-9]+" \
+            | grep -oE "${major}\.[0-9]+\.[0-9]+" \
+            | sort -V \
+            | tail -n 1)
+
+          if [ -z "$version" ]; then
+            echo "ERROR: Could not determine ${major}.x.y version from $pageUrl"
+            exit 1
+          fi
+
           engineUrl="https://developer.axonivy.com/permalink/${version}/axonivy-engine.zip"
+
+          echo "Resolved version: $version"
           echo "version=$version" >> $GITHUB_OUTPUT
           echo "convert_to_version=$version" >> $GITHUB_OUTPUT
           echo "engineUrl=$engineUrl" >> $GITHUB_OUTPUT
