@@ -1,10 +1,4 @@
-<!--
-Dear developer!     
-
-When you create your very valuable documentation, please be aware that this Readme.md is not only published on github. This documentation is also processed automatically and published on our website. For this to work, the two headings "Demo" and "Setup" must not be changed. Do also not change the order of the headings. Feel free to add sub-sections wherever you want.
--->
-
-# anonymous-demos
+# Anonymous Demos
 
 **Core idea**  
 Instead of registering users for every external user, use e-mails with randomly generated and unguessable tokens.
