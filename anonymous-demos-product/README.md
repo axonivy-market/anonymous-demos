@@ -10,10 +10,6 @@ continued by sending them special signals.
 * Start an unauthenticated process from any web form on any external web-page by the form's `action` attribute and their POST request. Verify the user's email-address and start an internal AxonIvy process.
 * During a running internal process, interact with a user by e-mail and wait for their response efficiently.
 
-<!--
-The explanations under "MY-RRODUCT-NAME" are displayed  e.g. for the Connector A-Trust here: https://market.axonivy.com/a-trust#tab-description   
--->
-
 ## Demo
 
 The demos show a fictional registration use-case, where an unauithenticated user enters their name and e-mail address to register. In the next step, the user's e-mail will be verified by sending a link with a random token to the user's e-email address. The token is stored in the AxonIvy *Business Data Repository* and if the user follows the token link, the token will be invalidated and an internal process is started by a signal.
@@ -31,9 +27,9 @@ All demo variants use the same workflow:
 * Start the demo as unauthenticated user and enter name and e-mail address
 * Wait for an e-mail verification e-mail and follow the link in this e-mail
 * A task for the role `AnonymousUserApprover` will be created. In this task, additional data (social security number) will be requested from the external user.
-* As unauthenticated user open your e-mail to find the additional data request, follow the link and enter the missing data.
+* As unauthenticated user opens the e-mail to find the additional data request, follow the link and enter the missing data.
 * You will receive an e-mail confirming the complete registration process.
-* A final confirmation task for the role `AnonymousUserApprover` will be created. After continuing from this task, the demo ends
+* A final confirmation task for the role `AnonymousUserApprover` will be created. After continuing from this task, the demo ends.
 * A small variant shows how a user owning the role `AnonymousUserApprover` can skip the waiting for the external user to enter their additional data. This can be used to terminate waiting in case the additional information was entered manually by some other means.
 
 **Scenarios**

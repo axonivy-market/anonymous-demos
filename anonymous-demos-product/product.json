@@ -22,49 +22,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "maven-dependency",
-      "data": {
-        "dependencies": [
-          {
-            "groupId": "com.axonivy.demo.anonymousdemos",
-            "artifactId": "anonymous-demos",
-            "version": "${version}",
-            "type": "iar"
-          }
-        ],
-        "repositories": [
-          {
-            "id": "maven.axonivy.com",
-            "url": "https://maven.axonivy.com",
-            "snapshots": {
-              "enabled": "true"
-            }
-          }
-        ]
-      }
-    }, 
-    {
-      "id": "maven-dropins",
-      "data": {
-        "dependencies": [
-          {
-            "groupId": "com.axonivy.demo.anonymousdemos",
-            "artifactId": "anonymous-demos",
-            "version": "${version}"
-          }
-        ],
-        "repositories": [
-          {
-            "id": "maven.axonivy.com",
-            "url": "https://maven.axonivy.com",
-            "snapshots": {
-              "enabled": "true"
-            }
-          }
-        ]
-      }
     }
   ]
 }
