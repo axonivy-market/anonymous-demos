@@ -39,9 +39,6 @@ The demos can be run in the following scenarios:
 A. Standalone in the AxonIvy Designer
 B. With the Apache Web Server and the AxonIvy Designer
 C. With the Apache Web Server, the AxonIvy Engine and a Test E-Mail Server
-<!--
-We use all entries under the heading "Demo" for the demo-Tab on our Website, e.g. for the Connector A-Trust here: https://market.axonivy.com/a-trust#tab-demo  
--->
 
 ## Setup
 
