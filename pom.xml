@@ -1,15 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.axonivy.demo.anonymousdemos</groupId>
+  <groupId>com.axonivy.demo.anonymous</groupId>
   <name>anonymous-demos</name>
   <artifactId>anonymous-demos-modules</artifactId>
   <version>12.0.12-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
-    <module>anonymous-demos</module>
-    <module>anonymous-demos-demo</module>
-    <module>anonymous-demos-test</module>
+    <module>anonymous-demos-core</module>
+    <module>anonymous-demos-open</module>
     <module>anonymous-demos-product</module>
   </modules>
 
