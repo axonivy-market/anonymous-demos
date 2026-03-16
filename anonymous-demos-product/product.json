@@ -6,7 +6,7 @@
       "data": {
         "projects": [
           {
-            "groupId": "com.axonivy.demo.anonymousdemos",
+            "groupId": "com.axonivy.demo.anonymous",
             "artifactId": "anonymous-demos-core",
             "version": "${version}",
             "type": "iar"

@@ -9,6 +9,7 @@
   <modules>
     <module>anonymous-demos-core</module>
     <module>anonymous-demos-open</module>
+    <module>anonymous-demos-test</module>
     <module>anonymous-demos-product</module>
   </modules>
 
