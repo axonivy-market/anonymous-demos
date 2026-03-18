@@ -36,7 +36,7 @@ All demo variants use the same workflow:
 * A task for the role `AnonymousUserApprover` will be created. In this task, additional data (social security number) will be requested from the external user.
 
     ![Request SSN](images/request_social_security_number.png)
-* As unauthenticated user, open your e-mail to find the additional data request, follow the link and enter the missing data.
+* As an unauthenticated user, open your e-mail to find the additional data request, follow the link and enter the missing data.
 * You will receive an e-mail confirming the complete registration process.
 * A final confirmation task for the role `AnonymousUserApprover` will be created. After continuing from this task, the demo ends
 * A small variant shows how a user owning the role `AnonymousUserApprover` can skip the waiting for the external user to enter their additional data. This can be used to terminate waiting in case the additional information was entered manually by some other means.
