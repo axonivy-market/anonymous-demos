@@ -3,33 +3,36 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.axonivy.demo.anonymous</groupId>
-  <artifactId>anonymous-demos-test</artifactId>
+  <artifactId>anonymous-demos-open</artifactId>
   <version>12.0.12-SNAPSHOT</version>
   <packaging>iar</packaging>
   <properties>
+    <project.build.plugin.version>12.0.8</project.build.plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
     <dependency>
       <groupId>com.axonivy.demo.anonymous</groupId>
-      <artifactId>anonymous-demos-open</artifactId>
+      <artifactId>anonymous-demos-core</artifactId>
       <version>${project.version}</version>
       <type>iar</type>
     </dependency>
-    <dependency>
-      <groupId>com.axonivy.ivy.test</groupId>
-      <artifactId>unit-tester</artifactId>
-      <version>12.0.2</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
+  <pluginRepositories>
+    <pluginRepository>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+      <id>sonatype</id>
+      <url>https://central.sonatype.com/repository/maven-snapshots</url>
+    </pluginRepository>
+  </pluginRepositories>
   <build>
-    <testSourceDirectory>src_test</testSourceDirectory>
     <plugins>
       <plugin>
         <groupId>com.axonivy.ivy.ci</groupId>
         <artifactId>project-build-plugin</artifactId>
-        <version>12.0.8</version>
+        <version>${project.build.plugin.version}</version>
         <extensions>true</extensions>
       </plugin>
     </plugins>
