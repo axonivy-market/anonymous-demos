@@ -10,6 +10,12 @@
             "artifactId": "anonymous-demos-core",
             "version": "${version}",
             "type": "iar"
+          },
+          {
+            "groupId": "com.axonivy.demo.anonymous",
+            "artifactId": "anonymous-demos-open",
+            "version": "${version}",
+            "type": "iar"
           }
         ],
         "repositories": [
