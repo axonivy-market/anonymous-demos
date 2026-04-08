@@ -1,5 +1,5 @@
 {
-  "$schema" : "https://json-schema.axonivy.com/process/12.0.0/process.json",
+  "$schema" : "https://json-schema.axonivy.com/process/13.1.2/process.json",
   "id" : "19C23800FB27FF95",
   "config" : {
     "data" : "com.axonivy.demo.anonymous.core.PersonApprovalData"
@@ -47,7 +47,9 @@
         "task" : {
           "name" : "<%=ivy.cms.co(\"/Tasks/ApproveRegistration/name\", [in.person.fullName])%>",
           "responsible" : {
-            "activator" : "AnonymousUserApprover"
+            "roles" : [
+              "AnonymousUserApprover"
+            ]
           }
         },
         "output" : {
@@ -73,7 +75,9 @@
         "task" : {
           "name" : "<%=ivy.cms.co(\"/Tasks/AdminTask/name\", [in.person.fullName])%>",
           "responsible" : {
-            "activator" : "AnonymousUserAdmin"
+            "roles" : [
+              "AnonymousUserAdmin"
+            ]
           }
         }
       },
