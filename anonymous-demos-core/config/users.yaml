@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://json-schema.axonivy.com/14.0-dev/config/users.json
+Users:
+  - Name: anonymous_user_approver
+    Password: password
+    FullName: Anonymous User Approver
+    Roles:
+      - AnonymousUserApprover
+  - Name: anonymous_user_admin
+    Password: password
+    FullName: Anonymous User Admin
+    Roles:
+      - AnonymousUserAdmin
