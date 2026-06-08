@@ -11,8 +11,7 @@
       "config" : {
         "signature" : "register",
         "request" : {
-          "name" : "<%=ivy.cms.co(\"/Processes/register\")%>",
-          "isVisibleOnStartList" : false
+          "name" : "<%=ivy.cms.co(\"/Processes/register\")%>"
         }
       },
       "visual" : {
