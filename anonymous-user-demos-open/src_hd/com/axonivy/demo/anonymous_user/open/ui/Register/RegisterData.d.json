@@ -1,0 +1,14 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
+  "simpleName" : "RegisterData",
+  "namespace" : "com.axonivy.demo.anyonymous_user.open.ui.Register",
+  "fields" : [ {
+    "name" : "person",
+    "type" : "com.axonivy.demo.anyonymous_user.core.Person"
+  }, {
+    "name" : "result"
+  }, {
+    "name" : "addMissingData",
+    "type" : "Boolean"
+  } ]
+}

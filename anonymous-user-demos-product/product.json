@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.axonivy.com/market/10.0.0/product.json",
+  "installers": [
+    {
+      "id": "maven-import",
+      "data": {
+        "projects": [
+          {
+            "groupId": "com.axonivy.demo.anonymous_user",
+            "artifactId": "anonymous-user-demos-core",
+            "version": "${version}",
+            "type": "iar"
+          },
+          {
+            "groupId": "com.axonivy.demo.anonymous_user",
+            "artifactId": "anonymous-user-demos-open",
+            "version": "${version}",
+            "type": "iar"
+          }
+        ],
+        "repositories": [
+          {
+            "id": "maven.axonivy.com",
+            "url": "https://maven.axonivy.com",
+            "snapshots": {
+              "enabled": "true"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
