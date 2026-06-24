@@ -1,5 +1,11 @@
 # Anonymous Demos
 
+> [!CAUTION]
+> ## Deprecated
+> These connectors are deprecated and will no longer be maintained or supported. It will be removed in Release 14.
+>
+> **Recommended alternative:** [Portal](https://market.axonivy.com/portal)
+
 [![CI Build](https://github.com/axonivy-market/anonymous-demos/actions/workflows/ci.yml/badge.svg)](https://github.com/axonivy-market/anonymous-demos/actions/workflows/ci.yml)
 
 **Core idea**  
