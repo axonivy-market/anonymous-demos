@@ -1,10 +1,10 @@
 {
   "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
   "simpleName" : "RegisterData",
-  "namespace" : "com.axonivy.demo.anyonymous_user.open.ui.Register",
+  "namespace" : "com.axonivy.demo.anonymous_user.open.ui.Register",
   "fields" : [ {
     "name" : "person",
-    "type" : "com.axonivy.demo.anyonymous_user.core.Person"
+    "type" : "com.axonivy.demo.anonymous_user.core.Person"
   }, {
     "name" : "result"
   }, {

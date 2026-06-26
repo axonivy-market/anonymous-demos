@@ -1,7 +1,7 @@
 {
   "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
   "simpleName" : "PersonApprovalData",
-  "namespace" : "com.axonivy.demo.anyonymous_user.core",
+  "namespace" : "com.axonivy.demo.anonymous_user.core",
   "fields" : [ {
     "name" : "personId"
   }, {
@@ -9,6 +9,6 @@
     "modifiers" : [ ]
   }, {
     "name" : "person",
-    "type" : "com.axonivy.demo.anyonymous_user.core.Person"
+    "type" : "com.axonivy.demo.anonymous_user.core.Person"
   } ]
 }

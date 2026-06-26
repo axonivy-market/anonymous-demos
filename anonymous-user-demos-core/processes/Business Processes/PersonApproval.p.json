@@ -2,7 +2,7 @@
   "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/process.json",
   "id" : "19C23800FB27FF95",
   "config" : {
-    "data" : "com.axonivy.demo.anyonymous_user.core.PersonApprovalData"
+    "data" : "com.axonivy.demo.anonymous_user.core.PersonApprovalData"
   },
   "elements" : [ {
       "id" : "f1",
@@ -20,7 +20,7 @@
         "output" : {
           "map" : { },
           "code" : [
-            "import com.axonivy.demo.anyonymous_user.core.Person;",
+            "import com.axonivy.demo.anonymous_user.core.Person;",
             "out.personId = signal.getSignalData() as String;",
             "out.person = ivy.repo.find(out.personId, Person.class) as Person;"
           ]
@@ -38,7 +38,7 @@
       "type" : "UserTask",
       "name" : "Approve registration and request missing data.",
       "config" : {
-        "dialog" : "com.axonivy.demo.anyonymous_user.core.ui.Person:start(String)",
+        "dialog" : "com.axonivy.demo.anonymous_user.core.ui.Person:start(String)",
         "call" : {
           "map" : {
             "param.personId" : "in.personId"
@@ -54,7 +54,7 @@
         },
         "output" : {
           "code" : [
-            "import com.axonivy.demo.anyonymous_user.core.Person;",
+            "import com.axonivy.demo.anonymous_user.core.Person;",
             "out.person = ivy.repo.find(out.personId, Person.class) as Person;"
           ]
         }
@@ -71,7 +71,7 @@
       "type" : "UserTask",
       "name" : "Admin task - wait for user to submit missing data.",
       "config" : {
-        "dialog" : "com.axonivy.demo.anyonymous_user.core.ui.admin.AdminTask:start()",
+        "dialog" : "com.axonivy.demo.anonymous_user.core.ui.admin.AdminTask:start()",
         "task" : {
           "name" : "<%=ivy.cms.co(\"/Tasks/AdminTask/name\", [in.person.fullName])%>",
           "responsible" : {
@@ -133,7 +133,7 @@
       "config" : {
         "output" : {
           "code" : [
-            "import com.axonivy.demo.anyonymous_user.core.Person;",
+            "import com.axonivy.demo.anonymous_user.core.Person;",
             "in.person = ivy.repo.find(in.personId, Person.class) as Person;"
           ]
         }
@@ -149,7 +149,7 @@
       "type" : "UserTask",
       "name" : "Final information.",
       "config" : {
-        "dialog" : "com.axonivy.demo.anyonymous_user.core.ui.Person:start(String)",
+        "dialog" : "com.axonivy.demo.anonymous_user.core.ui.Person:start(String)",
         "call" : {
           "map" : {
             "param.personId" : "in.personId"

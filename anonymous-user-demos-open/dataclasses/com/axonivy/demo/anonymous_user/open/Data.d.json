@@ -1,5 +1,5 @@
 {
   "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
   "simpleName" : "Data",
-  "namespace" : "com.axonivy.demo.anyonymous_user.open"
+  "namespace" : "com.axonivy.demo.anonymous_user.open"
 }

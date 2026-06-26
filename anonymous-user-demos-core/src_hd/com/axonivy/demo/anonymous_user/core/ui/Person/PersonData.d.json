@@ -1,10 +1,10 @@
 {
   "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
   "simpleName" : "PersonData",
-  "namespace" : "com.axonivy.demo.anyonymous_user.core.ui.Person",
+  "namespace" : "com.axonivy.demo.anonymous_user.core.ui.Person",
   "fields" : [ {
     "name" : "person",
-    "type" : "com.axonivy.demo.anyonymous_user.core.Person"
+    "type" : "com.axonivy.demo.anonymous_user.core.Person"
   }, {
     "name" : "personId"
   }, {

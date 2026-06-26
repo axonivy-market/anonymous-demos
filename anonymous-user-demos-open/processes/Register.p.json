@@ -2,7 +2,7 @@
   "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/process.json",
   "id" : "19C23640F9AD30D8",
   "config" : {
-    "data" : "com.axonivy.demo.anyonymous_user.open.RegisterData"
+    "data" : "com.axonivy.demo.anonymous_user.open.RegisterData"
   },
   "elements" : [ {
       "id" : "f0",
@@ -25,7 +25,7 @@
       "type" : "DialogCall",
       "name" : "Register",
       "config" : {
-        "dialog" : "com.axonivy.demo.anyonymous_user.open.ui.Register:start()",
+        "dialog" : "com.axonivy.demo.anonymous_user.open.ui.Register:start()",
         "output" : {
           "map" : {
             "out" : "in",
@@ -101,7 +101,7 @@
           ],
           "map" : { },
           "code" : [
-            "import com.axonivy.demo.anyonymous_user.core.Token;",
+            "import com.axonivy.demo.anonymous_user.core.Token;",
             "out.token = ivy.repo.search(Token.class).textField(\"token\").isEqualToIgnoringCase(param.token).execute().getFirst() as Token;"
           ]
         },
@@ -156,9 +156,9 @@
       "config" : {
         "output" : {
           "code" : [
-            "import com.axonivy.demo.anyonymous_user.core.Service;",
+            "import com.axonivy.demo.anonymous_user.core.Service;",
             "import java.util.UUID;",
-            "import com.axonivy.demo.anyonymous_user.core.Token;",
+            "import com.axonivy.demo.anonymous_user.core.Token;",
             "",
             "String id = ivy.repo.save(in.person).getId();",
             "",
@@ -231,7 +231,7 @@
       "config" : {
         "output" : {
           "code" : [
-            "import com.axonivy.demo.anyonymous_user.core.Token;",
+            "import com.axonivy.demo.anonymous_user.core.Token;",
             "ivy.wf.signals().create().data(in.token.personId).send(\"personApproval\");",
             "",
             "in.token.valid = false;",
@@ -288,8 +288,8 @@
           ],
           "map" : { },
           "code" : [
-            "import com.axonivy.demo.anyonymous_user.core.Person;",
-            "import com.axonivy.demo.anyonymous_user.core.Token;",
+            "import com.axonivy.demo.anonymous_user.core.Person;",
+            "import com.axonivy.demo.anonymous_user.core.Token;",
             "out.token = ivy.repo.search(Token.class).textField(\"token\").isEqualToIgnoringCase(param.token).execute().getFirst() as Token;",
             "out.person = ivy.repo.find(out.token.personId, Person.class) as Person;"
           ]
@@ -319,7 +319,7 @@
       "type" : "DialogCall",
       "name" : "Submit missing data.",
       "config" : {
-        "dialog" : "com.axonivy.demo.anyonymous_user.open.ui.Register:submitMissingData(com.axonivy.demo.anyonymous_user.core.Person)",
+        "dialog" : "com.axonivy.demo.anonymous_user.open.ui.Register:submitMissingData(com.axonivy.demo.anonymous_user.core.Person)",
         "call" : {
           "map" : {
             "param.person" : "in.person"

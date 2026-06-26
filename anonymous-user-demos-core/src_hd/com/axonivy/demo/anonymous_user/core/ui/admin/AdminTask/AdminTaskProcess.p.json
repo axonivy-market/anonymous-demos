@@ -3,7 +3,7 @@
   "id" : "19C2DE961429A52E",
   "kind" : "HTML_DIALOG",
   "config" : {
-    "data" : "com.axonivy.demo.anyonymous_user.core.ui.admin.AdminTask.AdminTaskData"
+    "data" : "com.axonivy.demo.anonymous_user.core.ui.admin.AdminTask.AdminTaskData"
   },
   "elements" : [ {
       "id" : "f0",

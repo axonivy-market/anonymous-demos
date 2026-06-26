@@ -1,4 +1,4 @@
-package com.axonivy.demo.anyonymous_user.test;
+package com.axonivy.demo.anonymous_user.test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -6,7 +6,7 @@ import java.util.UUID;
 
 import org.junit.jupiter.api.Test;
 
-import com.axonivy.demo.anyonymous_user.core.Service;
+import com.axonivy.demo.anonymous_user.core.Service;
 
 import ch.ivyteam.ivy.environment.Ivy;
 import ch.ivyteam.ivy.environment.IvyTest;
@@ -18,7 +18,7 @@ class ServiceTest {
 
   @Test
   void appRelativeLink_registerProcess() {
-    String baseUrl = Ivy.var().get("com.axonivy.demo.anyonymous_user.baseUrl");
+    String baseUrl = Ivy.var().get("com.axonivy.demo.anonymous_user.baseUrl");
     String result = Service.get().appRelativeLink(
         "anonymous-user-demos-open/" + REGISTER_PROCESS_ID + "/register.ivp");
     assertThat(result).isEqualTo(baseUrl + "/anonymous-user-demos-open/" + REGISTER_PROCESS_ID + "/register.ivp");

@@ -3,7 +3,7 @@
   "id" : "19C2359012AEA0A6",
   "kind" : "HTML_DIALOG",
   "config" : {
-    "data" : "com.axonivy.demo.anyonymous_user.open.ui.Register.RegisterData"
+    "data" : "com.axonivy.demo.anonymous_user.open.ui.Register.RegisterData"
   },
   "elements" : [ {
       "id" : "f0",
@@ -14,12 +14,12 @@
         "input" : {
           "map" : {
             "out.addMissingData" : "false",
-            "out.person" : "new com.axonivy.demo.anyonymous_user.core.Person()"
+            "out.person" : "new com.axonivy.demo.anonymous_user.core.Person()"
           }
         },
         "result" : {
           "params" : [
-            { "name" : "person", "type" : "com.axonivy.demo.anyonymous_user.core.Person", "desc" : "" },
+            { "name" : "person", "type" : "com.axonivy.demo.anonymous_user.core.Person", "desc" : "" },
             { "name" : "result", "type" : "String", "desc" : "" }
           ],
           "map" : {
@@ -103,7 +103,7 @@
         "signature" : "submitMissingData",
         "input" : {
           "params" : [
-            { "name" : "person", "type" : "com.axonivy.demo.anyonymous_user.core.Person", "desc" : "" }
+            { "name" : "person", "type" : "com.axonivy.demo.anonymous_user.core.Person", "desc" : "" }
           ],
           "map" : {
             "out.addMissingData" : "true",
@@ -112,7 +112,7 @@
         },
         "result" : {
           "params" : [
-            { "name" : "person", "type" : "com.axonivy.demo.anyonymous_user.core.Person", "desc" : "" },
+            { "name" : "person", "type" : "com.axonivy.demo.anonymous_user.core.Person", "desc" : "" },
             { "name" : "result", "type" : "String", "desc" : "" }
           ],
           "map" : {

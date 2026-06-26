@@ -1,11 +1,11 @@
-package com.axonivy.demo.anyonymous_user.core;
+package com.axonivy.demo.anonymous_user.core;
 
 import java.net.URI;
 
 import ch.ivyteam.ivy.environment.Ivy;
 
 public class Service {
-  private static final String APP_BASE_URL = "com.axonivy.demo.anyonymous_user.baseUrl";
+  private static final String APP_BASE_URL = "com.axonivy.demo.anonymous_user.baseUrl";
   private static final Service INSTANCE = new Service();
 
 

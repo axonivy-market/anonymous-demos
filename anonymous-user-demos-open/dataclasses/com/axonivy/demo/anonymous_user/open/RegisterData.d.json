@@ -1,10 +1,10 @@
 {
   "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
   "simpleName" : "RegisterData",
-  "namespace" : "com.axonivy.demo.anyonymous_user.open",
+  "namespace" : "com.axonivy.demo.anonymous_user.open",
   "fields" : [ {
     "name" : "person",
-    "type" : "com.axonivy.demo.anyonymous_user.core.Person",
+    "type" : "com.axonivy.demo.anonymous_user.core.Person",
     "modifiers" : [ ]
   }, {
     "name" : "result",
@@ -14,7 +14,7 @@
     "modifiers" : [ ]
   }, {
     "name" : "token",
-    "type" : "com.axonivy.demo.anyonymous_user.core.Token",
+    "type" : "com.axonivy.demo.anonymous_user.core.Token",
     "modifiers" : [ ]
   }, {
     "name" : "personId",

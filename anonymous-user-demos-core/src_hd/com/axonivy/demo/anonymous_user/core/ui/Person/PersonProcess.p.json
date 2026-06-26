@@ -3,7 +3,7 @@
   "id" : "19C23BB61C86480D",
   "kind" : "HTML_DIALOG",
   "config" : {
-    "data" : "com.axonivy.demo.anyonymous_user.core.ui.Person.PersonData"
+    "data" : "com.axonivy.demo.anonymous_user.core.ui.Person.PersonData"
   },
   "elements" : [ {
       "id" : "f0",
@@ -20,7 +20,7 @@
           },
           "code" : [
             "import org.apache.commons.lang3.StringUtils;",
-            "out.person = ivy.repo.find(param.personId, com.axonivy.demo.anyonymous_user.core.Person.class) as com.axonivy.demo.anyonymous_user.core.Person;",
+            "out.person = ivy.repo.find(param.personId, com.axonivy.demo.anonymous_user.core.Person.class) as com.axonivy.demo.anonymous_user.core.Person;",
             "out.missingSocSecNum = StringUtils.isBlank(out.person.socialSecurityNumber);"
           ]
         },
@@ -79,9 +79,9 @@
       "config" : {
         "output" : {
           "code" : [
-            "import com.axonivy.demo.anyonymous_user.core.Service;",
+            "import com.axonivy.demo.anonymous_user.core.Service;",
             "import java.util.UUID;",
-            "import com.axonivy.demo.anyonymous_user.core.Token;",
+            "import com.axonivy.demo.anonymous_user.core.Token;",
             "",
             "Token token = new Token();",
             "token.personId = in.personId;",
