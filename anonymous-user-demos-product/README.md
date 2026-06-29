@@ -59,7 +59,7 @@ C. With the Apache Web Server, the Axon Ivy Engine and a Test E-Mail Server
 
 Assuming your Axon Ivy Designer runs at the default port, open the link: http://localhost:8080/~Developer-ws/Developer-ws/1/anonymous-user-demos-open/19C23640F9AD30D8/register.ivp to start the demo.
 
-Open the *Email Messages* view in Axon Ivy Designer to see any e-mails generated.
+Configure an Email destination (you can use the Smtp4Dev server included in the Docker environment configured in this example to listen on port 2525) and check Emails sent.
 
 To work on internal tasks, in a second browser open the workflow UI at http://localhost:8080 (or install the Portal if you like).
 
@@ -83,7 +83,7 @@ This variant uses the same docker environment as variant B which can be started 
 
 First, build the deployable file by right-clicking on the top-level `pom.xml` file and selecting `Run as... / Maven install`. This will start the build process and created a `zip` file in the `target`directory.
 
-Next, go to the Demo Axon Ivy Engine at http://localhost:10080/ and open the Engine Cockpit.
+Next, go to the Demo Axon Ivy Engine at http://localhost:9080/ and open the Engine Cockpit.
 
 Create a new application with the exact name `anonymous-user-demos` and deploy the `zip` file which was generated before.
 

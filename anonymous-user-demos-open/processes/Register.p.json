@@ -437,7 +437,8 @@
         "output" : {
           "code" : [
             "import ch.ivyteam.ivy.process.model.value.SignalCode;",
-            "ivy.wf.signals().create().data(in.personId).send(new SignalCode(\"continueAfterFillingData:\"+in.personId));"
+            "",
+            "ivy.wf.signals().create().data(in.personId).send(SignalCode.of(\"continueAfterFillingData:\"+in.personId));"
           ]
         }
       },

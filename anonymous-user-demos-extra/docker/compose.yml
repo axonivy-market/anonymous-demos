@@ -21,7 +21,7 @@ services:
     container_name: anonymous_user_demos_ivy
     hostname: ivy
     ports:
-      - '${IVY_PORT:-10080}:8080'
+      - '${IVY_PORT:-9080}:8080'
     volumes:
       - './AxonIvy/configuration/applications:/ivy/configuration/applications'
       - './AxonIvy/configuration/ivy.yaml:/ivy/configuration/ivy.yaml'

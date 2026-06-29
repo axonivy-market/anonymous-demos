@@ -3,6 +3,6 @@ Variables:
   com:
     axonivy:
       demo:
-        anonymous:
+        anonymous_user:
           # External URL to application open space for building external links.
           baseUrl: http://localhost:8080/~Developer-ws/Developer-ws/1/pro
