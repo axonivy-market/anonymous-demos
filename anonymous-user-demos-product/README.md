@@ -71,9 +71,7 @@ Start the containers with the command:
 
 `docker-compose up -d`
 
-This should start all containers.
-
-Open the link http://localhost:81/ to start the demo.
+Open the link http://localhost:81/register.html to start the demo.
 
 Continue in the same way as in variant A.
 
@@ -88,7 +86,11 @@ Next, go to the Demo Axon Ivy Engine at http://localhost:9080/ and open the Engi
 
 Create a new application with the exact name `anonymous-user-demos` and deploy the `zip` file (or `iar` files) generated before.
 
-Open the link http://localhost/ to start the demo.
+Create two users and grant them the roles `anonymous_user_approver` and `anonymous_user_admin` respectively.
+
+Set the global variable `com.axonivy.demo.anonymous_user.baseUrl` to http://localhost/anonymous-user-demos/1/pro
+
+Open the link http://localhost/register.html to start the demo.
 
 To work on internal tasks, use the `anonymous_user_approver` (Password `password`) owning the role `AnonymousUserApprover` for most tasks or the `anonymous_user_admin` (Password `password`) owning the role `AnonymousUserAdmin` for the Admin task.
 

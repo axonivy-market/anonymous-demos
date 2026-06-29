@@ -6,5 +6,5 @@ Variables:
         anonymous_user:
           # External URL to application open space for building external links.
           # For the designer test use: http://localhost:81/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro
-          # For the engine test use: http://localhost/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro
+          # For the engine test use: http://localhost/anonymous-user-demos/1/pro
           baseUrl: http://localhost:81/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro

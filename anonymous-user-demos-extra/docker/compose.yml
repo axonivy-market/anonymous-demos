@@ -17,7 +17,7 @@ services:
       - './apache/certs/server.key:/usr/local/apache2/conf/server.key'
   ivy:
     restart: 'no'
-    image: 'axonivy/axonivy-engine:13.2'
+    image: 'axonivy/axonivy-engine:nightly'
     container_name: anonymous_user_demos_ivy
     hostname: ivy
     ports:
