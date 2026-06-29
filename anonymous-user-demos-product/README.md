@@ -86,11 +86,13 @@ Next, go to the Demo Axon Ivy Engine at http://localhost:9080/ and open the Engi
 
 Create a new application with the exact name `anonymous-user-demos` and deploy the `zip` file (or `iar` files) generated before.
 
-Create two users and grant them the roles `anonymous_user_approver` and `anonymous_user_admin` respectively.
+Make sure, you have two users e.g. `AnonymousUserApprover` and `AnonymousUserAdmin` and grant them the roles `anonymous_user_approver` and `anonymous_user_admin` respectively.
 
-Set the global variable `com.axonivy.demo.anonymous_user.baseUrl` to http://localhost/anonymous-user-demos/1/pro
+Make sure, the global variable `com.axonivy.demo.anonymous_user.baseUrl` is set to http://localhost/anonymous-user-demos/1/pro
 
-Open the link http://localhost/register.html to start the demo.
+To start the demo, open a browser for the **external user** at http://localhost/register.html and their email view at http://localhost:2580/
+
+Open another browser for the **internal user** at http://localhost:9080/
 
 To work on internal tasks, use the `anonymous_user_approver` (Password `password`) owning the role `AnonymousUserApprover` for most tasks or the `anonymous_user_admin` (Password `password`) owning the role `AnonymousUserAdmin` for the Admin task.
 
