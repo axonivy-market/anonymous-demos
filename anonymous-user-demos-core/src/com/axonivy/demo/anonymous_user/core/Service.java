@@ -20,6 +20,7 @@ public class Service {
    * @return
    */
   public String appRelativeLink(String rel) {
+    // http://localhost:8080/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro/anonymous-user-demos-open/19C23640F9AD30D8/emailVerification.ivp
     return URI.create(String.join("/", Ivy.var().get(APP_BASE_URL), rel)).normalize().toString();
   }
 }
