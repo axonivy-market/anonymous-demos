@@ -81,11 +81,12 @@ Continue in the same way as in variant A.
 
 This variant uses the same docker environment as variant B which can be started in the same way, but requires a little more setup.
 
-First, build the deployable file by right-clicking on the top-level `pom.xml` file and selecting `Run as... / Maven install`. This will start the build process and created a `zip` file in the `target`directory.
+Unpack `anonymous-user-demos-core` and `anonymous-user-demos-open` into the same workspace and start `mvn clean install` in
+`anonymous-user-demos-open`. This will build the deployable zip-file in the `anonymous-user-demos-open/target` directory containing the application. Alternatively, you can use the `iar` files directly instead of using the `zip` file.
 
 Next, go to the Demo Axon Ivy Engine at http://localhost:9080/ and open the Engine Cockpit.
 
-Create a new application with the exact name `anonymous-user-demos` and deploy the `zip` file which was generated before.
+Create a new application with the exact name `anonymous-user-demos` and deploy the `zip` file (or `iar` files) generated before.
 
 Open the link http://localhost/ to start the demo.
 
