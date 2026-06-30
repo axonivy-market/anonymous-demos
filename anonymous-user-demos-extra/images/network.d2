@@ -1,0 +1,27 @@
+external: "External\nUser" {
+  shape: person
+}
+
+
+internet: "Internet" {
+    shape: cloud
+}
+
+dmz: "DMZ" {
+    proxy: "Reverse Proxy"
+    mailer: "Mailer"
+    intzone: "Internal" {
+        ivy: "Axon Ivy"
+        internal: "Internal\nUser" {
+          shape: person
+        }
+    }
+}
+
+external <-> internet: "HTTPS"
+external <- internet: "SMTP"
+dmz.intzone.internal -> dmz.intzone.ivy
+dmz.intzone.ivy -> dmz.mailer
+dmz.mailer -> internet: "SMTP"
+internet <-> dmz.proxy: "HTTPS"
+dmz.proxy -> dmz.intzone.ivy
