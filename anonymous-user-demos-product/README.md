@@ -24,6 +24,8 @@ When the approver continues from this final dialog, the process will end.
 **Workflow**  
 All demo variants use the same workflow:
 
+![Workflow Sequence](images/anonymous-sequence.svg)
+
 * Start the demo as unauthenticated user and enter name and e-mail address
     ![Apache page - registration](images/registration_page_apache.png)
 
@@ -78,6 +80,8 @@ Continue in the same way as in variant A.
 ***Variant C, Apache WebServer, Axon Ivy Engine, Smtp4Dev Email Test Server***
 
 This variant uses the same docker environment as variant B which can be started in the same way, but requires a little more setup.
+
+![Schematic system architecture](images/network.svg)
 
 Unpack `anonymous-user-demos-core` and `anonymous-user-demos-open` into the same workspace and start `mvn clean install` in
 `anonymous-user-demos-open`. This will build the deployable zip-file in the `anonymous-user-demos-open/target` directory containing the application. Alternatively, you can use the `iar` files directly instead of using the `zip` file.

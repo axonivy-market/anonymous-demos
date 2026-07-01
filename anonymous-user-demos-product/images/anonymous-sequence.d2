@@ -1,5 +1,14 @@
 shape: sequence_diagram
 
+classes: {
+  mailtx: {
+    style: {
+      stroke-width: 4
+      bold:true
+    }
+  }
+}
+
 external: "External\nUser"
 internal: "Internal\nUser"
 
@@ -8,7 +17,7 @@ ivy: "Axon Ivy"
 
 external -> ivy: "Register by email address"
 ivy -> external: "✉ Send verification email"{
-  style.stroke-dash: 4
+    class: mailtx
 }
 ivy -> external: "\"Please check your email\""
 external -> ivy: "Confirm email address"
@@ -16,7 +25,7 @@ ivy -> external: "\"Your email was confirmed\""
 
 internal -> ivy: "Open validation task"
 ivy -> external: "✉ Request missing data email"{
-  style.stroke-dash: 4
+    class: mailtx
 }
 ivy -> internal: ""
 
@@ -25,6 +34,6 @@ ivy -> external: "\"Thank you for submitting missing data\""
 
 internal -> ivy: "Open validation task and accept"
 ivy -> external: "✉ Approved email"{
-  style.stroke-dash: 4
+    class: mailtx
 }
 ivy -> internal: ""
