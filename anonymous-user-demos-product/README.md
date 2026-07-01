@@ -22,7 +22,7 @@ When the approver continues from this final dialog, the process will end.
 
 
 **Workflow**  
-All demo variants use the same workflow:
+All demo variants use the following workflow:
 
 ![Workflow Sequence](images/anonymous-sequence.svg)
 
