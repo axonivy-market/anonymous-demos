@@ -59,12 +59,13 @@ C. With the Apache Web Server, the Axon Ivy Engine and a Test E-Mail Server
 
 ***Variant A, Axon Ivy Designer***
 
-Assuming your Axon Ivy Designer runs on the default port, open the link: http://localhost:8080/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro/anonymous-user-demos-open/19C23640F9AD30D8/register.ivp to start the demo.
-
 In the Engine Cockpit, configure
 
 * the gobal variable `com.axonivy.demo.anonymous.user.baseUrl` as `http://localhost:8080/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro`
 * the e-mail host (if you are using the Smtp4Dev server included in the Docker environment, set the System Configuration `EMail.Server.Port` to port `2525`)
+
+Assuming your Axon Ivy Designer runs on the default port, start the demo with the link http://localhost:8080/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro/anonymous-user-demos-open/19C23640F9AD30D8/register.ivp.
+
 
 To work on internal tasks, in a second browser open the workflow UI at http://localhost:8080/~Developer-anonymous-user-demos (or install the Portal if you like). If you are using the Smtp4Dev server included in the Docker environment, a Web GUI for checking e-mail should be available at http://localhost:2580
 
