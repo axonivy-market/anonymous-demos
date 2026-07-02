@@ -6,13 +6,13 @@
       "data": {
         "projects": [
           {
-            "groupId": "com.axonivy.demo.anonymous_user",
+            "groupId": "com.axonivy.demo.anonymous.user",
             "artifactId": "anonymous-user-demos-core",
             "version": "${version}",
             "type": "iar"
           },
           {
-            "groupId": "com.axonivy.demo.anonymous_user",
+            "groupId": "com.axonivy.demo.anonymous.user",
             "artifactId": "anonymous-user-demos-open",
             "version": "${version}",
             "type": "iar"

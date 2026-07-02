@@ -31,9 +31,9 @@ All demo variants use the following workflow:
 
     ![designer page - registration](images/registration_page_designer.png)
 
-* Wait for the verification email and follow the link in it.
+* Wait for the verification e-mail and follow the link in it.
 
-    ![Registration email](images/registration_email.png)
+    ![Registration e-mail](images/registration_email.png)
 
 * A task for the role `AnonymousUserApprover` will be created. In this task, additional data (social security number) will be requested from the external user.
 
@@ -59,11 +59,14 @@ C. With the Apache Web Server, the Axon Ivy Engine and a Test E-Mail Server
 
 ***Variant A, Axon Ivy Designer***
 
-Assuming your Axon Ivy Designer runs at the default port, open the link: http://localhost:8080/~Developer-ws/Developer-ws/1/anonymous-user-demos-open/19C23640F9AD30D8/register.ivp to start the demo.
+Assuming your Axon Ivy Designer runs on the default port, open the link: http://localhost:8080/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro/anonymous-user-demos-open/19C23640F9AD30D8/register.ivp to start the demo.
 
-Configure an Email destination (you can use the Smtp4Dev server included in the Docker environment configured in this example to listen on port 2525) and check Emails sent.
+In the Engine Cockpit, configure
 
-To work on internal tasks, in a second browser open the workflow UI at http://localhost:8080 (or install the Portal if you like).
+* the gobal variable `com.axonivy.demo.anonymous.user.baseUrl` as `http://localhost:8080/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro`
+* the e-mail host (if you are using the Smtp4Dev server included in the Docker environment, set the System Configuration `EMail.Server.Port` to port `2525`)
+
+To work on internal tasks, in a second browser open the workflow UI at http://localhost:8080/~Developer-anonymous-user-demos (or install the Portal if you like). If you are using the Smtp4Dev server included in the Docker environment, a Web GUI for checking e-mail should be available at http://localhost:2580
 
 ***Variant B, Apache WebServer and Axon Ivy Designer***
 
@@ -73,32 +76,39 @@ Start the containers with the command:
 
 `docker-compose up -d`
 
-Open the link http://localhost:81/register.html to start the demo.
+Open the link http://localhost:81/register.html to start the demo from a pure HTML page or open the link http://localhost:81/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro/anonymous-user-demos-open/19C23640F9AD30D8/register.ivp to start the demo from an AxonIvy page.
+
+In the Engine Cockpit, configure
+
+* the gobal variable `com.axonivy.demo.anonymous.user.baseUrl` as `http://localhost:81/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro`
+* the e-mail host (if you are using the Smtp4Dev server included in the Docker environment, set the System Configuration `EMail.Server.Port` to port `2525`)
 
 Continue in the same way as in variant A.
 
-***Variant C, Apache WebServer, Axon Ivy Engine, Smtp4Dev Email Test Server***
+***Variant C, Apache WebServer, Axon Ivy Engine, Smtp4Dev E-mail Test Server***
 
 This variant uses the same docker environment as variant B which can be started in the same way, but requires a little more setup.
 
 ![Schematic system architecture](images/network.svg)
 
 Unpack `anonymous-user-demos-core` and `anonymous-user-demos-open` into the same workspace and start `mvn clean install` in
-`anonymous-user-demos-open`. This will build the deployable zip-file in the `anonymous-user-demos-open/target` directory containing the application. Alternatively, you can use the `iar` files directly instead of using the `zip` file.
+`anonymous-user-demos-open`. This will build a deployable zip-file in the `anonymous-user-demos-open/target` directory containing the application. Alternatively, you can use deploy the `iar` files directly instead of using the `zip` file.
 
-Next, go to the Demo Axon Ivy Engine at http://localhost:9080/ and open the Engine Cockpit.
+Next, go to the Demo Axon Ivy Engine at http://localhost/ and open the Engine Cockpit.
 
 Create a new application with the exact name `anonymous-user-demos` and deploy the `zip` file (or `iar` files) generated before.
 
 Make sure, you have two users e.g. `AnonymousUserApprover` and `AnonymousUserAdmin` and grant them the roles `anonymous_user_approver` and `anonymous_user_admin` respectively.
 
-Make sure, the global variable `com.axonivy.demo.anonymous_user.baseUrl` is set to http://localhost/anonymous-user-demos/1/pro
+Make sure, the global variable `com.axonivy.demo.anonymous.user.baseUrl` is set to http://localhost/anonymous-user-demos/1/pro
 
-To start the demo, open a browser for the **external user** at http://localhost/register.html and their email view at http://localhost:2580/
+Make sure the e-mail host is configured to `mail` port `25`, set the System Configuration `EMail.Server.Port` to port `2525` and the `EMail.Server.Host` to mail.
 
-Open another browser for the **internal user** at http://localhost:9080/
+To start the demo, open a browser for the **external user** at http://localhost/register.html and their e-mail view at http://localhost:2580/
 
-To work on internal tasks, use the `anonymous_user_approver` (Password `password`) owning the role `AnonymousUserApprover` for most tasks or the `anonymous_user_admin` (Password `password`) owning the role `AnonymousUserAdmin` for the Admin task.
+Open another browser for the **internal user** at http://localhost/ or http://localhost:9080
+
+To work on internal tasks, use the `anonymous.user_approver` (Password `password`) owning the role `AnonymousUserApprover` for most tasks or the `anonymous.user_admin` (Password `password`) owning the role `AnonymousUserAdmin` for the Admin task.
 
 To see e-mails generated by the Axon Ivy Engine, open http://localhost:2580/ (no e-mails will be sent to the net).
 

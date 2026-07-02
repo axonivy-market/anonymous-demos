@@ -8,13 +8,13 @@
     <version>14.0.0-SNAPSHOT</version>
     <relativePath></relativePath>
   </parent>
-  <groupId>com.axonivy.demo.anonymous_user</groupId>
+  <groupId>com.axonivy.demo.anonymous.user</groupId>
   <artifactId>anonymous-user-demos-test</artifactId>
   <version>14.0.0-SNAPSHOT</version>
   <packaging>iar</packaging>
   <dependencies>
     <dependency>
-      <groupId>com.axonivy.demo.anonymous_user</groupId>
+      <groupId>com.axonivy.demo.anonymous.user</groupId>
       <artifactId>anonymous-user-demos-open</artifactId>
       <version>${project.version}</version>
       <type>iar</type>

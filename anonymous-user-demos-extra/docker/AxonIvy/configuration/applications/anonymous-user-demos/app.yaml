@@ -3,5 +3,6 @@ Variables:
   com:
     axonivy:
       demo:
-        anonymous_user:
-          baseUrl: http://localhost/anonymous-user-demos/1/pro
+        anonymous:
+          user:
+            baseUrl: http://localhost/anonymous-user-demos/1/pro

@@ -1,0 +1,13 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
+  "simpleName" : "Person",
+  "namespace" : "com.axonivy.demo.anonymous.user.core",
+  "fields" : [ {
+    "name" : "fullName"
+  }, {
+    "name" : "email"
+  }, {
+    "name" : "socialSecurityNumber",
+    "comment" : "Social security number"
+  } ]
+}

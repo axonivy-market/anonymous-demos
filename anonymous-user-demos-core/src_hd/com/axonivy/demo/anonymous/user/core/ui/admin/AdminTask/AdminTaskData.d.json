@@ -1,0 +1,5 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
+  "simpleName" : "AdminTaskData",
+  "namespace" : "com.axonivy.demo.anonymous.user.core.ui.admin.AdminTask"
+}

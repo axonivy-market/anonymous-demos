@@ -1,0 +1,15 @@
+{
+  "$schema" : "https://json-schema.axonivy.com/14.0-dev/project/data-class.json",
+  "simpleName" : "Token",
+  "namespace" : "com.axonivy.demo.anonymous.user.core",
+  "fields" : [ {
+    "name" : "token"
+  }, {
+    "name" : "personId"
+  }, {
+    "name" : "type"
+  }, {
+    "name" : "valid",
+    "type" : "Boolean"
+  } ]
+}
