@@ -71,18 +71,19 @@ To work on internal tasks, in a second browser open the workflow UI at http://lo
 
 ***Variant B, Apache WebServer and Axon Ivy Designer***
 
-This variant uses docker containers to supply the demo environment. Make sure, you have docker installed, open a console or shell and go to the directory `anonymous-user-demos-extra/docker`
+This variant uses docker containers to supply the demo environment (containing among others a reverse proxy server and a development mail server). Make sure, you have docker installed, open a console or shell and go to the directory `anonymous-user-demos-extra/docker`
 
 Start the containers with the command:
 
 `docker-compose up -d`
 
-Open the link http://localhost:81/register.html to start the demo from a pure HTML page or open the link http://localhost:81/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro/anonymous-user-demos-open/19C23640F9AD30D8/register.ivp to start the demo from an AxonIvy page.
-
 In the Engine Cockpit, configure
 
-* the gobal variable `com.axonivy.demo.anonymous.user.baseUrl` as `http://localhost:81/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro`
+* the gobal variable `com.axonivy.demo.anonymous.user.baseUrl` tpo point to the reverse proxy server as `http://localhost:81/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro`
 * the e-mail host (if you are using the Smtp4Dev server included in the Docker environment, set the System Configuration `EMail.Server.Port` to port `2525`)
+
+Open the link http://localhost:81/register.html to start the demo from a pure HTML page or open the link http://localhost:81/~Developer-anonymous-user-demos/Developer-anonymous-user-demos/1/pro/anonymous-user-demos-open/19C23640F9AD30D8/register.ivp to start the demo from an AxonIvy page.
+
 
 Continue in the same way as in variant A.
 
