@@ -7,14 +7,14 @@
     <version>13.1.1</version>
     <relativePath />
   </parent>
-  <groupId>com.axonivy.demo.anonymous</groupId>
-  <artifactId>anonymous-demos-open</artifactId>
+  <groupId>com.axonivy.demo.anonymous.user</groupId>
+  <artifactId>anonymous-user-demos-open</artifactId>
   <version>13.2.2-SNAPSHOT</version>
   <packaging>iar</packaging>
   <dependencies>
     <dependency>
-      <groupId>com.axonivy.demo.anonymous</groupId>
-      <artifactId>anonymous-demos-core</artifactId>
+      <groupId>com.axonivy.demo.anonymous.user</groupId>
+      <artifactId>anonymous-user-demos-core</artifactId>
       <version>${project.version}</version>
       <type>iar</type>
     </dependency>
