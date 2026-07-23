@@ -1,6 +1,6 @@
-# Anonymous Demos
+# Anonymous User Demos
 
-[![CI Build](https://github.com/axonivy-market/anonymous-demos/actions/workflows/ci.yml/badge.svg)](https://github.com/axonivy-market/anonymous-demos/actions/workflows/ci.yml)
+[![CI Build](https://github.com/axonivy-market/anonymous-user-demos/actions/workflows/ci.yml/badge.svg)](https://github.com/axonivy-market/anonymous-user-demos/actions/workflows/ci.yml)
 
 **Core idea**  
 Instead of registering users for every external user, use e-mails with randomly generated and unguessable tokens.
@@ -12,4 +12,4 @@ continued by sending them special signals.
 * Start an unauthenticated process from any web form on any external web-page via the form's `action` attribute and its POST request. Verify the user's e-mail address and start an internal Axon Ivy process.
 * During a running internal process, interact with a user by e-mail and wait for their response efficiently.
 
-Read our [documentation](anonymous-demos-product/README.md).
+Read our [documentation](anonymous-user-demos-product/README.md).

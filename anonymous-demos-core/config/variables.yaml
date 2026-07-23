@@ -1,8 +1,0 @@
-# yaml-language-server: $schema=https://json-schema.axonivy.com/14.0-dev/config/variables.json
-Variables:
-  com:
-    axonivy:
-      demo:
-        anonymous:
-          # External URL to application open space for building external links.
-          baseUrl: http://localhost:81/designer/pro

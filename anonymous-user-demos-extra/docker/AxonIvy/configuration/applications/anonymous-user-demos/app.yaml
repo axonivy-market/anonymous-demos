@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://json-schema.axonivy.com/14.0-dev/app/app.json
+Variables:
+  com:
+    axonivy:
+      demo:
+        anonymous:
+          user:
+            baseUrl: http://localhost/anonymous-user-demos/1/pro
